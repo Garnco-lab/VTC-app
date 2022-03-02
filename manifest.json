@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "background" : { "scripts": ["background.js"] },
+  "permissions": [ "contextMenus", "http://*/*", "https://*/*" ],
+  "name": "Replace-Date",
+  "description": "Automatically format the date to VTC format. Author: Steven Deleon",
+  "author": "Steven Deleon",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
